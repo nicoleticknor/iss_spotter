@@ -8,3 +8,12 @@ nextIssTimesForMyLocation((error, flyTimes) => {
     console.log(`Next pass at ${date} for ${time.duration} seconds!`)
   }
 });
+
+const printPassTimes = (flyTimes) => {
+  for (let time of flyTimes) {
+    let date = new Date(time.risetime * 1000);
+    console.log(`Next pass at ${date} for ${time.duration} seconds!`)
+  }
+}
+
+module.exports = { printPassTimes };
